@@ -1,0 +1,33 @@
+              
+<html><title>1710991677</title>
+<body>
+
+<p>An unordered list:</p>
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+<p>Click the button to display the innerHTML of the second li element (index 1).</p>
+<button onclick="myFunction()">CHOICE</button>
+<p id="demo1"></p>
+<button onclick="myFunction1()">LENGTH</button>
+<p id="demo2"></p>
+<div class="example">First div element with class="example".</div>
+<button onclick="myFunction2()">CHANGE</button>
+<script>
+function myFunction() {
+  var x = document.getElementsByTagName("LI");
+  document.getElementById("demo1").innerHTML = x[1].innerHTML;
+}
+function myFunction1() {
+  var x = document.getElementsByTagName("LI");
+  document.getElementById("demo2").innerHTML = x.length;
+}
+function myFunction2() {
+  var x = document.getElementsByClassName("example");
+  x[0].innerHTML = "Hello World!";
+  }
+</script>
+</body>
+</html>
