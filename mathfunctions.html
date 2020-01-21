@@ -1,0 +1,58 @@
+<html>
+<body>
+<form><b>Enter the value:</b>
+<input type="text" id="fval" value=" "><br><br>
+<input type="radio" onclick="if(this.checked){squareroot()}">Click for<b> squareroot</b><br>
+<input type="radio" onclick="if(this.checked){absolute()}">Click for<b> absolute value</b><br>
+<input type="radio" onclick="if(this.checked){Ceil()}">Click for<b> Ceiling value</b> <br>
+<input type="radio" onclick="if(this.checked){floor()}">Click for <b>Floor value</b> <br>
+<input type="radio" onclick="if(this.checked){tan()}">Click for <b>Tangent value</b> <br>
+<input type="radio" onclick="if(this.checked){sec()}">Click for<b> Secant value</b> <br>
+<input type="radio" onclick="if(this.checked){round()}">Click for <b>Round-off value</b> <br>
+<input type="radio" onclick="if(this.checked){power()}">Click for<b> Powered value</b> <br>
+
+<b>Answer is:</b>
+ <input type="text" id="ans" value=" ">
+</form>
+<script>
+function squareroot()
+{
+document.getElementById("ans").value=Math.sqrt(document.getElementById("fval").value);
+}
+function absolute()
+{
+document.getElementById("ans").value=Math.abs(document.getElementById("fval").value);
+}
+function Ceil()
+{
+document.getElementById("ans").value=Math.ceil(document.getElementById("fval").value);
+}
+function floor()
+{
+document.getElementById("ans").value=Math.floor(document.getElementById("fval").value);
+}
+function tan()
+{
+document.getElementById("ans").value=Math.tan(document.getElementById("fval").value);
+}
+function tan()
+{
+document.getElementById("ans").value=Math.sec(document.getElementById("fval").value);
+}
+function round()
+{
+document.getElementById("ans").value=Math.round(document.getElementById("fval").value);
+}
+function power ()
+{
+var c=parseInt(prompt("Enter the power"));
+document.getElementById("ans").value=Math.pow(document.getElementById("fval").value,c);
+}
+</script>
+</body>
+</html>
+
+ 
+  
+
+ 

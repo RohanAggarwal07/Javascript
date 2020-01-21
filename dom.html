@@ -1,0 +1,21 @@
+<html>
+<head>
+<script>
+function fun()
+{
+var d=document.getElementsByTagName("p")[0];
+alert("Type of node is "+typeof(d));
+alert("Last child of node is "+d.lastChild);
+alert("Nodename of first child of node is "+d.firstChild.nodeName);
+alert("Nodevalue of first child of the node is "+d.nodeValue);
+alert("Nodetype of firstchild of node is "+d.firstChild.nodeType);
+alert("Parentnode of lastchild of node is "+d.lastChild.parentNode);
+}
+</script>
+<body>
+<p><b> hello world!</b></p>
+<p> Using DOM now....</p>
+<button onclick="fun()"> click me</button>
+</body
+</head>
+</html>
