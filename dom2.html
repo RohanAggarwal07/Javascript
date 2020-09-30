@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        <p id="p1">This is a paragraph.</p>
+        <p id="p2">This is another paragraph.</p>
+      </div>
+      <button onclick="addPara()">Add Paragraph at end</button><br><Br>
+      <button onclick="addPara2()">Add Paragraph at Start</button><br><Br>
+      <button onclick="removeFirst()">Remove First Child</button><br><Br>
+      <button onclick="removeLast()">Remove Last Child</button>
+      <script>
+          function addPara(){
+            var para = document.createElement("p");
+            var text=prompt("Enter Paragraph Text")
+            var node = document.createTextNode(text);
+            para.appendChild(node);
+            
+            var element = document.getElementById("div1");
+            element.appendChild(para);
+          }
+
+          function addPara2(){
+            var para = document.createElement("p");
+            var text=prompt("Enter Paragraph Text")
+            var node = document.createTextNode(text);
+            para.appendChild(node);
+
+            var element = document.getElementById("div1");
+            var childrens=element.children
+            element.insertBefore(para, childrens[0]);
+          }
+
+          function removeFirst(){
+              var full=document.getElementById("div1")
+              var para=document.getElementById("div1").children
+              if(para.length==0)
+                alert("No Para left")
+                else
+              full.removeChild(para[0])
+          }
+
+          function removeLast(){
+              var full=document.getElementById("div1")
+              var para=document.getElementById("div1").children
+              if(para.length==0)
+                alert("No Para left")
+                else
+              full.removeChild(para[para.length-1])
+          }
+      </script> 
+</body>
+</html>
